@@ -1,0 +1,11 @@
+services:
+  selenium-chrome:
+    image: selenium/standalone-chrome:latest
+    shm_size: 2gb
+    ports:
+      - "4444:4444"
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:4444/status"]
+      interval: 5s
+      timeout: 3s
+      retries: 12

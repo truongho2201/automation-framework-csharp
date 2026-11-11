@@ -1,0 +1,61 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "SeleniumTests: dotnet build",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "build",
+                "${workspaceFolder}/tests/SeleniumTests/SeleniumTests.csproj",
+                "--configuration",
+                "Debug"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/tests/SeleniumTests"
+            },
+            "problemMatcher": "$msCompile",
+            "group": "build",
+            "runOptions": {
+                "instanceLimit": 1,
+                "instancePolicy": "silent"
+            }
+        },
+        {
+            "label": "SeleniumTests: dotnet test (UI debug)",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "test",
+                "${workspaceFolder}/tests/SeleniumTests/SeleniumTests.csproj",
+                "--configuration",
+                "Debug",
+                "--no-restore",
+                "--filter",
+                "TestCategory=UI",
+                "--logger",
+                "console;verbosity=normal"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/tests/SeleniumTests"
+            },
+            "dependsOn": [
+                "SeleniumTests: dotnet build"
+            ],
+            "dependsOrder": "sequence",
+            "isBackground": true,
+            "problemMatcher": {
+                "base": "$msCompile",
+                "background": {
+                    "activeOnStart": false,
+                    "beginsPattern": "NUnit3TestExecutor discovered",
+                    "endsPattern": "Test Run (Successful|Failed)"
+                }
+            },
+            "runOptions": {
+                "instanceLimit": 1,
+                "instancePolicy": "silent"
+            }
+        }
+    ]
+}

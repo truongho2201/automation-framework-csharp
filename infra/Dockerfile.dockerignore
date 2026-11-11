@@ -1,0 +1,9 @@
+.git
+.azure
+.copilot-azure
+infra
+**/bin
+**/obj
+*.md
+*.env
+*.env.*

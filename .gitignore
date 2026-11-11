@@ -1,0 +1,14 @@
+**/bin/
+**/obj/
+.vs/
+TestResults/
+artifacts/
+screenshots/
+allure-results/
+allure-report/
+tests/SeleniumTests/appsettings.json
+.nuget-packages/
+.tools/
+.copilot-azure/
+*.user
+*.suo

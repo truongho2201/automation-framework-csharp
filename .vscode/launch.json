@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "SeleniumTests (debug)",
+            "type": "coreclr",
+            "request": "attach",
+            "processName": "testhost.exe",
+            "preLaunchTask": "SeleniumTests: dotnet test (UI debug)",
+            "osx": {
+                "processName": "testhost"
+            },
+            "linux": {
+                "processName": "testhost"
+            }
+        }
+    ]
+}

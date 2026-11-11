@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "environmentName": { "value": "seleniumtests-dev-caa9" },
+    "location": { "value": "southeastasia" },
+    "sessionId": { "value": "caa97786-1b75-4c0a-b2be-0af5489dc24c" },
+    "deployedBy": { "value": "Truong Ho Dac" },
+    "createdAt": { "value": "2026-11-09T17:59:08.5749731+07:00" },
+    "resourceGroupName": { "value": "rg-seleniumtests-dev-caa9" },
+    "logAnalyticsWorkspaceName": { "value": "log-seleniumtests-dev-caa9" },
+    "identityName": { "value": "id-seleniumtests-dev-caa9" },
+    "registryName": { "value": "crseleniumtestsdevcaa9" },
+    "registrySku": { "value": "Basic" },
+    "logAnalyticsSku": { "value": "PerGB2018" },
+    "applicationInsightsName": { "value": "appi-seleniumtests-dev-caa9" },
+    "containerAppsEnvironmentName": { "value": "cae-seleniumtests-dev-caa9" },
+    "containerAppsJobName": { "value": "ca-seleniumtests-dev-caa9" },
+    "entraAdminObjectId": { "value": "" },
+    "entraAdminName": { "value": "Truong Ho Dac" },
+    "containerImage": { "value": "mcr.microsoft.com/azuredocs/containerapps-helloworld:latest" }
+  }
+}
